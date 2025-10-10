@@ -57,9 +57,13 @@
       color: #1d4ed8;
       text-decoration: none;
       font-weight: 600;
+      transition: all 0.2s ease-in-out;
+      margin-right: 10px;
     }
     a:hover {
       text-decoration: underline;
+      color: #2563eb;
+      text-shadow: 0 0 4px rgba(37, 99, 235, 0.4);
     }
     section {
       margin-top: 40px;
@@ -80,6 +84,9 @@
       color: #60a5fa;
       text-decoration: none;
     }
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -92,37 +99,39 @@
     <section>
       <h2>🏭 Machines and Production Equipment</h2>
       <p>Below is a list of all available turnkey manufacturing machines.<br>
-      Click <strong>▶️ View</strong> beside each machine to open its video demonstration (Google Drive links to be added).</p>
+      Click <strong>▶️ View</strong> beside each machine to open its video or PDF documentation (Google Drive links to be added).</p>
 
       <table>
-        <tr><th>🏷️ Machine Name</th><th>🎥 Video</th></tr>
-        <tr><td>Tunnel Shrinking Steam</td><td><a href="#">▶️ View</a></td></tr>
-        <tr><td>Filling Machine 30 Liters</td><td><a href="#">▶️ View</a></td></tr>
-        <tr><td>2 Machines (4 Nozzles with Curve Conveyor Connect)</td><td><a href="#">▶️ View</a></td></tr>
-        <tr><td>Testing Chlor 4 Liters</td><td><a href="#">▶️ View</a></td></tr>
-        <tr><td>Stretching Wrapping Palette</td><td><a href="#">▶️ View</a></td></tr>
-        <tr><td>Sachet Liquid Machine</td><td><a href="#">▶️ View</a></td></tr>
-        <tr><td>Round Table for Each Machine Finish Product</td><td><a href="#">▶️ View</a></td></tr>
-        <tr><td>Machine Sachet After Finishing and Finally Testing with Conveyor</td><td><a href="#">▶️ View</a></td></tr>
-        <tr><td>Machine Filling and Sealing Tube Cream</td><td><a href="#">▶️ View</a></td></tr>
-        <tr><td>Labeling Round Bottle Machine</td><td><a href="#">▶️ View</a></td></tr>
-        <tr><td>Flash Filling Machine</td><td><a href="#">▶️ View</a></td></tr>
-        <tr><td>Filling Machine 8 Nozzles 2 Servo Motors 4 Liters</td><td><a href="#">▶️ View</a></td></tr>
-        <tr><td>Filling Machine 3 Liters</td><td><a href="#">▶️ View</a></td></tr>
-        <tr><td>Erector Carton Case Semiautomatic (Bottles and Gallon)</td><td><a href="#">▶️ View</a></td></tr>
-        <tr><td>Emulsifying Machine 250 L</td><td><a href="#">▶️ View</a></td></tr>
-        <tr><td>Electric Lifting</td><td><a href="#">▶️ View</a></td></tr>
-        <tr><td>Chlor Filling Machine</td><td><a href="#">▶️ View</a></td></tr>
-        <tr><td>Auto Capping Machine</td><td><a href="#">▶️ View</a></td></tr>
-        <tr><td>Auto Capping Chlor Bottle Machine</td><td><a href="#">▶️ View</a></td></tr>
-        <tr><td>30 Liters Filling Machine</td><td><a href="#">▶️ View</a></td></tr>
+        <tr><th>🏷️ Machine Name</th><th>🎥 / 📄 Files</th></tr>
+        <tr><td>Tunnel Shrinking Steam</td><td><a href="#">🎥 View Video</a> <a href="#">📄 View PDF</a></td></tr>
+        <tr><td>Tunnel Heating Shrinking</td><td><a href="#">🎥 View Video</a> <a href="#">📄 View PDF</a></td></tr>
+        <tr><td>Filling Machine 30 Liters</td><td><a href="#">🎥 View Video</a></td></tr>
+        <tr><td>2 Machines (4 Nozzles with Curve Conveyor Connect)</td><td><a href="#">🎥 View Video</a></td></tr>
+        <tr><td>Testing Chlor 4 Liters</td><td><a href="#">🎥 View Video</a></td></tr>
+        <tr><td>Stretching Wrapping Palette</td><td><a href="#">🎥 View Video</a></td></tr>
+        <tr><td>Sachet Liquid Machine</td><td><a href="#">🎥 View Video</a></td></tr>
+        <tr><td>Round Table for Each Machine Finish Product</td><td><a href="#">🎥 View Video</a></td></tr>
+        <tr><td>Machine Sachet After Finishing and Finally Testing with Conveyor</td><td><a href="#">🎥 View Video</a></td></tr>
+        <tr><td>Machine Filling and Sealing Tube Cream</td><td><a href="#">🎥 View Video</a></td></tr>
+        <tr><td>Labeling Round Bottle Machine</td><td><a href="#">🎥 View Video</a></td></tr>
+        <tr><td>Flash Filling Machine</td><td><a href="#">🎥 View Video</a></td></tr>
+        <tr><td>Filling Machine 8 Nozzles 2 Servo Motors 4 Liters</td><td><a href="#">🎥 View Video</a> <a href="#">📄 Photos</a></td></tr>
+        <tr><td>Filling Machine 3 Liters</td><td><a href="#">🎥 View Video</a></td></tr>
+        <tr><td>Erector Carton Case Semiautomatic (Bottles and Gallon)</td><td><a href="#">🎥 View Video</a></td></tr>
+        <tr><td>Emulsifying Machine 250 L</td><td><a href="#">🎥 View Video</a> <a href="#">📄 View PDF</a></td></tr>
+        <tr><td>Electric Lifting</td><td><a href="#">🎥 View Video</a> <a href="#">📄 View PDF</a></td></tr>
+        <tr><td>Induction Sealing for the Neck of the Bottles and Gallon</td><td><a href="#">🎥 View Video</a> <a href="#">📄 View PDF</a></td></tr>
+        <tr><td>Chlor Filling Machine</td><td><a href="#">🎥 View Video</a></td></tr>
+        <tr><td>Auto Capping Machine</td><td><a href="#">🎥 View Video</a></td></tr>
+        <tr><td>Auto Capping Chlor Bottle Machine</td><td><a href="#">🎥 View Video</a></td></tr>
+        <tr><td>30 Liters Filling Machine</td><td><a href="#">🎥 View Video</a></td></tr>
       </table>
     </section>
 
     <section>
       <h2>📄 Notes</h2>
       <p>
-        Each video showcases one of the specialized machines in operation, part of a complete turnkey production line setup.<br>
+        Each video or PDF showcases one of the specialized machines in operation or provides its technical documentation.<br>
         All machines are currently stored in our <strong>warehouse in China</strong> and ready for inspection or shipment.
       </p>
     </section>
@@ -132,8 +141,8 @@
       <p>
         For inquiries, partnership opportunities, or detailed investment information, please reach out:<br><br>
         📧 <strong>Email:</strong> <a href="mailto:jgate.jpm@gmail.com">jgate.jpm@gmail.com</a><br>
-        📞 <strong>Phone 1:</strong> +9613965665<br>
-        📞 <strong>Phone 2:</strong> +9613531317
+        📞 <strong>Architect Hasan Jaber:</strong> +9613531317<br>
+        📞 <strong>Architect Jaafar Komati:</strong> +9613965665
       </p>
     </section>
   </main>
