@@ -113,9 +113,18 @@
       transform: scale(1.05);
       box-shadow: 0 4px 14px rgba(37,99,235,0.4);
     }
-    .hidden {
-      display: none;
+    .hidden { display: none; }
+    .back-btn {
+      display: inline-block;
+      margin: 20px 0;
+      background: #1e3a8a;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
     }
+    .back-btn:hover { background: #2563eb; }
   </style>
 </head>
 <body>
@@ -124,21 +133,21 @@
     <h3>Cosmetics • Detergents • Plastics • Chlorine / Flash Disinfectants</h3>
   </header>
 
-  <main>
-    <div class="category-buttons">
-      <button onclick="showSection('machines')">🏭 Machines / Production Equipment Overview</button>
-      <button onclick="showSection('financial')">💰 Machines / Production Equipment Amount</button>
-      <button onclick="showSection('notes')">📄 Notes / 📞 Contact</button>
+  <main id="main-content">
+    <div class="category-buttons" id="menu">
+      <button onclick="openPage('machines')">🏭 Machines / Production Equipment Overview</button>
+      <button onclick="openPage('financial')">💰 Machines / Production Equipment Amount</button>
+      <button onclick="openPage('notes')">📄 Notes / 📞 Contact</button>
     </div>
 
     <!-- Machines Section -->
     <section id="machines" class="hidden">
+      <a href="#" class="back-btn" onclick="goBack()">⬅ Back to Main</a>
       <h2>🏭 Machines and Production Equipment</h2>
       <p>Click <strong>▶️ View</strong> beside each machine to open its video or PDF documentation.</p>
 
       <table>
         <tr><th>🏷️ Machine Name</th><th>🎥 / 📄 Files</th></tr>
-
         <tr><td>Tunnel Shrinking Steam</td><td><a href="https://drive.google.com/file/d/1COCtgbm90KPSXSvT5kp46ljKK3b9DSMV/view?usp=sharing">🎥 Video</a> <a href="https://drive.google.com/file/d/1KeXX_14Nf6l48VUnGmE7om1WG8DQtK8s/view?usp=sharing">📄 PDF</a></td></tr>
         <tr><td>Tunnel Heating Shrinking</td><td><a href="https://drive.google.com/file/d/1hGqTrmW5Prx-dclJzwrgMvJUeyL-p74h/view?usp=sharing">📄 PDF</a></td></tr>
         <tr><td>Filling Machine 30 Liters</td><td><a href="https://drive.google.com/file/d/1u4TqISQ4WzqDFXQb6MuqEy88-ecO64qn/view?usp=sharing">🎥 Video</a></td></tr>
@@ -177,21 +186,15 @@
 
     <!-- Financial Section -->
     <section id="financial" class="hidden">
+      <a href="#" class="back-btn" onclick="goBack()">⬅ Back to Main</a>
       <h2>💰 Amount</h2>
-      <p>View the full Bill of Quantities and pricing details.</p>
-      <table>
-        <tr><th>📄 Document</th><th>🔗 Link</th></tr>
-        <tr>
-          <td>Bill of Quantities</td>
-         <td><a href="https://docs.google.com/gview?url=https://cdn.jsdelivr.net/gh/jgatejpm-hub/Turnkey-Manufacturing-Lines@main/BOQ.pdf&embedded=true" target="_blank" rel="noopener">
-  📄 BOQ.pdf</a></td>
-
-        </tr>
-      </table>
+      <p>View the full Bill of Quantities and pricing details below.</p>
+      <iframe src="https://docs.google.com/gview?url=https://cdn.jsdelivr.net/gh/jgatejpm-hub/Turnkey-Manufacturing-Lines@main/BOQ.pdf&embedded=true" width="100%" height="700px"></iframe>
     </section>
 
     <!-- Notes & Contact Section -->
     <section id="notes" class="hidden">
+      <a href="#" class="back-btn" onclick="goBack()">⬅ Back to Main</a>
       <h2>📄 Notes</h2>
       <p>Each video or PDF showcases one of the specialized machines testing in the factory.<br>
       All machines are currently stored in our <strong>warehouse in China</strong> and ready for inspection or shipment.</p>
@@ -207,11 +210,14 @@
   </footer>
 
   <script>
-    function showSection(id) {
-      ['machines','financial','notes'].forEach(sec => {
-        document.getElementById(sec).classList.add('hidden');
-      });
+    function openPage(id) {
+      document.getElementById('menu').classList.add('hidden');
       document.getElementById(id).classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    function goBack() {
+      document.querySelectorAll('section').forEach(s => s.classList.add('hidden'));
+      document.getElementById('menu').classList.remove('hidden');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>
