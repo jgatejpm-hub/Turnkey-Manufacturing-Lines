@@ -73,6 +73,30 @@
       padding-left: 10px;
       color: #0f172a;
     }
+    .category-buttons {
+      text-align: center;
+      margin: 50px 0;
+    }
+    .category-buttons button {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: #fff;
+      border: none;
+      padding: 20px 40px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 12px;
+      margin: 10px;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .category-buttons button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 14px rgba(37,99,235,0.4);
+    }
+    .hidden {
+      display: none;
+    }
     footer {
       background-color: #0f172a;
       color: #f8fafc;
@@ -96,30 +120,48 @@
   </header>
 
   <main>
-    <!-- Category 1 -->
-    <section>
+    <!-- Category Buttons -->
+    <div class="category-buttons">
+      <button onclick="showSection('machines')">🏭 Machines and Production Equipment</button>
+      <button onclick="showSection('financial')">💰 Amount or Financial</button>
+    </div>
+
+    <!-- Machines Section -->
+    <section id="machines" class="hidden">
       <h2>🏭 Machines and Production Equipment</h2>
       <p>
         Below is a list of all available turnkey manufacturing machines.<br>
         Click <strong>▶️ View</strong> beside each machine to open its video or PDF documentation.
       </p>
 
-      <!-- Machine Table -->
       <table>
         <tr><th>🏷️ Machine Name</th><th>🎥 / 📄 Files</th></tr>
-
-        <!-- All your machine rows remain unchanged -->
-        <!-- (Keep your full list from the original file) -->
-        <!-- ... Paste your existing table rows here ... -->
+        <!-- Paste your full table rows from original file here -->
+        <tr><td>Tunnel Shrinking Steam</td><td><a href="https://drive.google.com/file/d/1COCtgbm90KPSXSvT5kp46ljKK3b9DSMV/view?usp=sharing">🎥 View Video</a> <a href="https://drive.google.com/file/d/1KeXX_14Nf6l48VUnGmE7om1WG8DQtK8s/view?usp=sharing">📄 View PDF</a></td></tr>
+        <!-- (Continue all your other rows here exactly as before) -->
       </table>
+
+      <section>
+        <h2>📄 Notes</h2>
+        <p>
+          Each video or PDF showcases one of the specialized machines testing in the factory.<br>
+          All machines are currently stored in our <strong>warehouse in China</strong> and ready for inspection or shipment.
+        </p>
+      </section>
+
+      <section>
+        <h2>📞 Contact</h2>
+        <p>
+          For inquiries, please reach out:<br><br>
+          📞 <strong>Mr. Roger Azar:</strong> +447724150769
+        </p>
+      </section>
     </section>
 
-    <!-- Category 2 -->
-    <section>
+    <!-- Financial Section -->
+    <section id="financial" class="hidden">
       <h2>💰 Amount or Financial</h2>
-      <p>
-        View the full Bill of Quantities and pricing details below:
-      </p>
+      <p>View the full Bill of Quantities and pricing details below:</p>
       <table>
         <tr><th>📄 Document</th><th>🔗 Link</th></tr>
         <tr>
@@ -127,24 +169,14 @@
           <td><a href="Turnkey-Manufacturing-Lines/BOQ%20final.pdf" target="_blank">📄 View PDF</a></td>
         </tr>
       </table>
-    </section>
 
-    <!-- Notes -->
-    <section>
-      <h2>📄 Notes</h2>
-      <p>
-        Each video or PDF showcases one of the specialized machines testing in the factory.<br>
-        All machines are currently stored in our <strong>warehouse in China</strong> and ready for inspection or shipment.
-      </p>
-    </section>
-
-    <!-- Contact -->
-    <section>
-      <h2>📞 Contact</h2>
-      <p>
-        For inquiries, please reach out:<br><br>
-        📞 <strong>Mr. Roger Azar:</strong> +447724150769
-      </p>
+      <section>
+        <h2>📞 Contact</h2>
+        <p>
+          For inquiries, please reach out:<br><br>
+          📞 <strong>Mr. Roger Azar:</strong> +447724150769
+        </p>
+      </section>
     </section>
   </main>
 
@@ -152,5 +184,14 @@
     <p>© 2025 Manufacturing Lines</p>
     <p><a href="https://jgatejpm-hub.github.io/Turnkey-Manufacturing-Investment-/">🌐 Visit Live Site</a></p>
   </footer>
+
+  <script>
+    function showSection(id) {
+      document.getElementById('machines').classList.add('hidden');
+      document.getElementById('financial').classList.add('hidden');
+      document.getElementById(id).classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
